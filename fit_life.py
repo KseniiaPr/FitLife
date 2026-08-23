@@ -5,7 +5,9 @@ print('Welcome to the FitLife!')
 print('-' * 30)
 
 user_name = input('What is your name? ')
-print(f'Nice to meet you, {user_name}! Now answer a few questions about yourself:')
+print(
+    f'Nice to meet you, {user_name}!'
+    'Now answer a few questions about yourself:')
 
 user_age = int(input('How old are you? '))
 user_weight = float(input('What is your weight? (kg) '))
