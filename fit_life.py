@@ -1,26 +1,26 @@
-# Проект FitLife - MVP версия 1.0
+WATER_PER_KG = 30
+ML_IN_LITER = 1000
 
+print('Welcome to the FitLife!')
+print('-' * 30)
 
-# 1. Знакомство
-# TODO: Спроси у пользователя имя и сохрани в переменную user_name
-# TODO: Спроси возраст и сохрани в переменную user_age (не забудь преобразовать в число)
+user_name = input('What is your name? ')
+print(f'Nice to meet you, {user_name}! Now answer a few questions about yourself:')
 
+user_age = int(input('How old are you? '))
+user_weight = float(input('What is your weight? (kg) '))
+user_height = float(input('What is your height? (m) '))
 
-# 2. Сбор данных
-# TODO: Запроси вес (в кг) и сохрани в user_weight (тип float)
-# TODO: Запроси рост (в метрах, например 1.75) и сохрани в user_height (тип float)
+# body mass index calculation
+bmi = round(user_weight / (user_height ** 2), 1)
 
+# water intake calculation
+water_ml = user_weight * WATER_PER_KG
+water_l = water_ml / ML_IN_LITER
 
-# 3. Логика расчетов (Функции как "черный ящик": используем арифметику)
-# Формула ИМТ: вес разделить на (рост в квадрате)
-# TODO: Рассчитай bmi (Индекс массы тела)
-
-
-# Подсчет воды: вес * 30 мл
-# TODO: Рассчитай water_needed
-
-
-# 4. Вывод красивого результата
-# TODO: Используй f-строку, чтобы вывести приветствие, например: "Привет, Иван!"
-# TODO: Выведи возраст, ИМТ (округленный до 1 знака) и норму воды.
-print("Расчет окончен. Будьте здоровы!")
+print('-' * 30)
+print(f'Report for the user: {user_name} ({user_age} y.o.)')
+print(f'Your Body Mass Index: {bmi}')
+print(f'Recommended daily water intake: {water_l:.2f} l')
+print()
+print('Calculation complete. Stay healthy!')
