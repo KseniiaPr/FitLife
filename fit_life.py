@@ -6,7 +6,7 @@ print('-' * 30)
 
 user_name = input('What is your name? ')
 print(
-    f'Nice to meet you, {user_name}!'
+    f'Nice to meet you, {user_name}! '
     'Now answer a few questions about yourself:')
 
 user_age = int(input('How old are you? '))
